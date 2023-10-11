@@ -1,0 +1,85 @@
+/* ROOT */
+
+:root {
+    --header-height: 60px;
+    --sidebar-width: 50px; 
+    --lg-sidebar-width: 100px;
+}
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* LAYOUT */
+.ms_wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+/* COMMON */
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+    
+.ms_row {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+}
+
+    
+
+/* HEADER */
+.ms_header {
+    width: 100%;
+    height: var(--header-height);
+    /* debug */
+    background-color: red;    
+}
+
+/* MAIN/ */
+
+/* .ms_dash-container {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    margin: 0 auto;
+} */
+
+/* SIDEBAR COL */
+.ms_sidebar-col {
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    /* debug */
+    background-color: blue;
+}
+
+/* MAIN COL */
+
+
+.ms_main-col {
+    width: calc(100% - var(--sidebar-width));
+    height: calc(100vh - var(--header-height));
+    /* debug */
+    background-color: green;
+}
+
+/* RESPONSIVE - GENERAL LAYOUT - 992px */
+
+@media screen and (min-width: 992px) {
+    .ms_sidebar-col {
+        width: var(--lg-sidebar-width);
+    }
+
+    .ms_main-col {
+        width: calc(100% - var(--lg-sidebar-width));
+    }
+}
