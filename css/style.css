@@ -2,8 +2,8 @@
 
 :root {
     --header-height: 60px;
-    --sidebar-width: 50px;
-    --lg-sidebar-width: 100px;
+    --sidebar-width: 60px;
+    --lg-sidebar-width: 120px;
     --hero-height: 300px;
     --hero-md-height: 120px;
     --sidebar-bg-color: #0B2339;
@@ -73,9 +73,24 @@ ul {
 .ms_sidebar-col {
     width: var(--sidebar-width);
     height: calc(100vh - var(--header-height));
-    /* debug */
+    background-image: url(../img/sidebar-bg.png);
     background-color: var(--sidebar-bg-color);
+
 }
+
+.sidebar-admin-icon a,
+.ms_side-icons a {
+    color: white;
+    /* text-decoration: none; */
+}
+
+.ms_sidebar-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+}
+
 
 /* MAIN COL */
 
@@ -85,7 +100,6 @@ ul {
     height: calc(100vh - var(--header-height));
     /* debug */
     background-color: green;
-    /* border: 1px solid green; */
     overflow-y: scroll;
 }
 
