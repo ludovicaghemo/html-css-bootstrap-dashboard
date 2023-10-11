@@ -47,6 +47,10 @@ body {
     border: 1px solid var(--table-bd-color);
 }
 
+ul {
+    /* list-style-type: none; */
+    padding-left: 0;
+}
 
 
 /* HEADER */
