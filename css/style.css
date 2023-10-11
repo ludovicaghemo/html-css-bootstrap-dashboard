@@ -8,6 +8,8 @@
     --hero-md-height: 120px;
     --sidebar-bg-color: #0B2339;
     --hero-bg-color: #1B72E8;
+    --table-bd-color: #dee2e6; 
+    --card-header-bg-color: #F7F7F7;
 }
 
 /* RESET */
@@ -38,6 +40,11 @@ body {
     display: flex;
     width: 100%;
     height: calc(100vh - var(--header-height));
+}
+
+.ms_card-header {
+    background-color: var(--card-header-bg-color);
+    border: 1px solid var(--table-bd-color);
 }
 
 
@@ -106,4 +113,9 @@ body {
 }
 
 /* MAIN COL */
+
+/* TABLE */
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: var(--table-bd-color);
+}
 
