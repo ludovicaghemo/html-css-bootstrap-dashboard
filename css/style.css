@@ -2,8 +2,12 @@
 
 :root {
     --header-height: 60px;
-    --sidebar-width: 50px; 
+    --sidebar-width: 50px;
     --lg-sidebar-width: 100px;
+    --hero-height: 300px;
+    --hero-md-height: 120px;
+    --sidebar-bg-color: #0B2339;
+    --hero-bg-color: #1B72E8;
 }
 
 /* RESET */
@@ -27,39 +31,39 @@ img {
 
 body {
     font-family: sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-    
+
 .ms_row {
     display: flex;
     width: 100%;
     height: calc(100vh - var(--header-height));
 }
 
-    
+
 
 /* HEADER */
 .ms_header {
     width: 100%;
     height: var(--header-height);
     /* debug */
-    background-color: red;    
+    background-color: red;
 }
 
 /* MAIN/ */
 
-/* .ms_dash-container {
+.ms_dash-container {
     width: 100%;
     height: calc(100vh - var(--header-height));
     margin: 0 auto;
-} */
+}
 
 /* SIDEBAR COL */
 .ms_sidebar-col {
     width: var(--sidebar-width);
     height: calc(100vh - var(--header-height));
     /* debug */
-    background-color: blue;
+    background-color: var(--sidebar-bg-color);
 }
 
 /* MAIN COL */
@@ -69,7 +73,8 @@ body {
     width: calc(100% - var(--sidebar-width));
     height: calc(100vh - var(--header-height));
     /* debug */
-    background-color: green;
+    /* border: 1px solid green; */
+    overflow-y: scroll;
 }
 
 /* RESPONSIVE - GENERAL LAYOUT - 992px */
@@ -81,5 +86,20 @@ body {
 
     .ms_main-col {
         width: calc(100% - var(--lg-sidebar-width));
+    }
+}
+
+/* BLUE BAR - HOVER */
+
+.ms_hero {
+    height: var(--hero-height);
+    background-color: var(--hero-bg-color);
+}
+
+/* RESPONSIVE - HERO - 768px */
+
+@media screen and (min-width: 768px) {
+    .ms_hero {
+        height: var(--hero-md-height);
     }
 }
