@@ -6,6 +6,7 @@
     --ms_lg-sidebar-width: 120px;
     --ms_hero-height: 250px;
     --ms_hero-md-height: 180px;
+    --ms_main-col-bg-color: #F8F9FA;
     --header-bg-color: white;
     --sidebar-bg-color: #0B2339;
     --hero-bg-color: #1B72E8;
@@ -37,7 +38,7 @@ img {
 
 body {
     font-family: sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .ms_row {
@@ -51,19 +52,30 @@ body {
     border: 1px solid var(--table-bd-color);
 }
 
-ul {
-    /* list-style-type: none; */
-    padding-left: 0;
-}
-
 
 /* HEADER */
 header {
     width: 100%;
     height: var(--header-height);
-    /* debug */
-    background-color: red;
+    background-color: var(--card-header-bg-color);
 }
+
+.ms_logo {
+    height: calc(var(--header-height) - 25px);
+}
+
+.ms_searchbar {
+    background-color: #E5E5E5;
+    padding: .3rem .6rem;
+    border-radius: 4px;
+}
+
+.ms_searchbar-input {
+    border: 0;
+    background-color: #E5E5E5;
+    padding-left: .5rem;
+}
+
 /* MAIN/ */
 
 .ms_dash-container {
@@ -84,7 +96,6 @@ header {
 .sidebar-admin-icon a,
 .ms_side-icons a {
     color: white;
-    /* text-decoration: none; */
 }
 
 .ms_sidebar-icon {
@@ -101,9 +112,8 @@ header {
 .ms_main-col {
     width: calc(100% - var(--sidebar-width));
     height: calc(100vh - var(--header-height));
-    /* debug */
-    background-color: green;
     overflow-y: scroll;
+    background-color: var(--ms_main-col-bg-color);
 }
 
 /* RESPONSIVE - GENERAL LAYOUT - 992px */

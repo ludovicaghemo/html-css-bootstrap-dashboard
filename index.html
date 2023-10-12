@@ -26,7 +26,51 @@
 
         <!-- Header -->
         <header class="ms_header">
-            <!-- Searchbar -->
+            <div class="d-flex h-100">
+                <div class="container-fluid h-100 d-flex">
+                    <div class="row align-items-center h-100 w-100">
+                        <!-- Logo -->
+                        <div class="col-auto">
+                            <img class="ms_logo d-lg-none" src="img/mobile-logo.png" alt="">
+                            <img class="ms_logo d-none d-lg-inline-block" src="img/logo.svg" alt="">
+                        </div>
+
+                        <!-- Searchbar -->
+                        <div class="col">
+                            <div class="ms_searchbar d-flex align-items-center w-100">
+                                <!-- Lens -->
+                                <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                                <!-- Search -->
+                                <input class="ms_searchbar-input w-100" type="search" name="search" id="search" placeholder="Prova a cercare: Lezioni di Laravel">
+                            </div>
+                        </div>
+                        <!-- /Searchbar -->
+
+                        <!-- Menu -->
+                        <div class="col-auto">
+                            <ul class="d-flex list-unstyled mb-0 ps-0">
+                                <!-- Menu icon -->
+                                <li class="ms-3 d-none d-lg-inline-block">
+                                    <a href=""><i class="fa-solid fa-list" style="color: #000000;"></i></i></a>
+                                </li>
+                                <!-- Question mark icon -->
+                                <li class="ms-3 d-none d-lg-inline-block">
+                                    <a href=""><i class="fa-solid fa-circle-question" style="color: #000000;"></i></a>
+                                </li>
+                                <!-- Vertical ellipsis icon -->
+                                <li class="ms-3 d-none d-lg-inline-block">
+                                    <a href=""><i class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></i></a>
+                                </li>
+                                <!-- Bell icon -->
+                                <li class="ms-3">
+                                    <a href=""><i class="fa-solid fa-bell" style="color: #ff8f00;"></i></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Menu -->
+                    </div>
+                </div>
+            </div>
         </header>
         <!-- /Header -->
 
@@ -43,7 +87,7 @@
 
                         <div class="ms_side-icons">
                             <!-- Icon list -->
-                            <ul class="px-3 py-2 list-unstyled">
+                            <ul class="px-3 py-2 list-unstyled ps-0">
                                 <li class="mt-1 text-center">
                                     <a class="text-decoration-none" href="">
                                         <span class="ms_sidebar-icon">
@@ -77,7 +121,7 @@
                             </ul>                            
                         </div>
 
-                        <div class="sidebar-admin-icon p-2">
+                        <div class="sidebar-admin-icon p-2 ps-0">
                             <a class="text-decoration-none text-center" href="">
                                 <span class="ms_sidebar-icon">
                                     <i class="fa-solid fa-gear"></i>
@@ -136,7 +180,7 @@
                                 <!-- Col Prossime Classi & FAQ-->
                                 <div class="col-12 col-lg-7">
                                     <!-- Table -->
-                                    <div class="card mb-2">
+                                    <div class="card mt-4">
                                         <header class="ms_card-header pt-2 ps-2 d-flex align-items-center">
                                             <h4>Prossime classi</h4>
                                         </header>
@@ -244,7 +288,7 @@
                                         </table>
                                     </div>
                                     <!-- FAQ -->
-                                    <div class="card mb-4">
+                                    <div class="card mt-4">
                                         <header class="ms_card-header pt-2 ps-2 d-flex align-items-center">
                                             <h4>F.A.Q.</h4>
                                         </header>
@@ -314,7 +358,7 @@
                                 <div class="col-12 col-lg-5">
 
                                     <!-- Todo Card-->
-                                    <div class="card mb-2">
+                                    <div class="card mt-4">
                                         <header class="ms_card-header pt-2 ps-2 d-flex align-items-center">
                                             <h4>Todo</h4>
                                         </header>
@@ -344,17 +388,20 @@
                                     </div>  
 
                                     <!-- Graph Card-->
-                                    <div class="card">
-                                        <div class="graph-card border p-4">
+                                    <div class="card mt-4 p-3">
+                                        <div class="card-body border rounded">
                                             <img src="img/stats.jpeg" alt="stats image">
-                                            <h6><strong>Utenti attivi</strong></h6>
-                                            <p class="border-bottom">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
-                                            <ul class="list-unstyled">
-                                                <li class="border-bottom">Gennaio: 1200</li>
-                                                <li class="border-bottom">Febbraio: 800</li>
-                                                <li class="border-bottom">Marzo: 1500</li>
-                                                <li class="border-bottom"><a href="">Visualizza report approfondito</a></li>
-                                            </ul>
+                                            <div class="graph-card card-body border-top-0 p-4">
+                                             
+                                                <h6><strong>Utenti attivi</strong></h6>
+                                                <div class="border-bottom">Lista degli utenti attivi in piattaforma nell'ultimo mese</div>
+                                                <ul class="list-unstyled ps-0">
+                                                    <li class="border-bottom">Gennaio: 1200</li>
+                                                    <li class="border-bottom">Febbraio: 800</li>
+                                                    <li class="border-bottom">Marzo: 1500</li>
+                                                    <li class="border-bottom"><a href="">Visualizza report approfondito</a>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
