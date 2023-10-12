@@ -4,8 +4,8 @@
     --header-height: 60px;
     --ms_sidebar-width: 60px;
     --ms_lg-sidebar-width: 120px;
-    --hero-height: 300px;
-    --hero-md-height: 120px;
+    --ms_hero-height: 250px;
+    --ms_hero-md-height: 180px;
     --header-bg-color: white;
     --sidebar-bg-color: #0B2339;
     --hero-bg-color: #1B72E8;
@@ -118,10 +118,10 @@ header {
     }
 }
 
-/* BLUE BAR - HOVER */
+/* BLUE BAR - HERO */
 
 .ms_hero {
-    height: var(--hero-height);
+    height: var(--ms_hero-height);
     background-color: var(--hero-bg-color);
 }
 
@@ -129,7 +129,7 @@ header {
 
 @media screen and (min-width: 768px) {
     .ms_hero {
-        height: var(--hero-md-height);
+        height: var(--ms_hero-md-height);
     }
 }
 
@@ -147,9 +147,6 @@ header {
 
 .ms_status {
     border: 1px solid;
-    border-radius: 10px;
-    color: white;
-    padding: .2rem;
 }
 
 .ms_done-status {
@@ -170,9 +167,7 @@ header {
 .ms_actions {
     display: inline-block;
     border: 1px solid black;
-    border-radius: 10px;
-    padding: .5rem;
-    font-size: .8rem;
+    padding: .4rem;
     line-height: 0;
     margin-left: .1rem;
 }
