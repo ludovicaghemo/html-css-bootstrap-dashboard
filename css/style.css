@@ -2,14 +2,18 @@
 
 :root {
     --header-height: 60px;
-    --sidebar-width: 60px;
-    --lg-sidebar-width: 120px;
+    --ms_sidebar-width: 60px;
+    --ms_lg-sidebar-width: 120px;
     --hero-height: 300px;
     --hero-md-height: 120px;
+    --header-bg-color: white;
     --sidebar-bg-color: #0B2339;
     --hero-bg-color: #1B72E8;
     --table-bd-color: #dee2e6; 
     --card-header-bg-color: #F7F7F7;
+    --ms_done-status-color: #198754;
+    --ms_process-status-color: #FFC107;
+    --ms_failed-status-color: #DC3545;
 }
 
 /* RESET */
@@ -54,13 +58,12 @@ ul {
 
 
 /* HEADER */
-.ms_header {
+header {
     width: 100%;
     height: var(--header-height);
     /* debug */
     background-color: red;
 }
-
 /* MAIN/ */
 
 .ms_dash-container {
@@ -71,7 +74,7 @@ ul {
 
 /* SIDEBAR COL */
 .ms_sidebar-col {
-    width: var(--sidebar-width);
+    width: var(--ms_sidebar-width);
     height: calc(100vh - var(--header-height));
     background-image: url(../img/sidebar-bg.png);
     background-color: var(--sidebar-bg-color);
@@ -107,11 +110,11 @@ ul {
 
 @media screen and (min-width: 992px) {
     .ms_sidebar-col {
-        width: var(--lg-sidebar-width);
+        width: var(--ms_lg-sidebar-width);
     }
 
     .ms_main-col {
-        width: calc(100% - var(--lg-sidebar-width));
+        width: calc(100% - var(--ms_lg-sidebar-width));
     }
 }
 
@@ -135,5 +138,42 @@ ul {
 /* TABLE */
 .table>:not(:last-child)>:last-child>* {
     border-bottom-color: var(--table-bd-color);
+}
+
+.ms_class-avatar {
+    width: 35px;
+    height: 35px;
+}
+
+.ms_status {
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    padding: .2rem;
+}
+
+.ms_done-status {
+    border-color: var(--ms_done-status-color);
+    background-color: var(--ms_done-status-color);
+}
+
+.ms_process-status {
+    border-color: var(--ms_process-status-color);
+    background-color: var(--ms_process-status-color);
+}
+
+.ms_failed-status {
+    border-color: var(--ms_failed-status-color);
+    background-color: var(--ms_failed-status-color);
+}
+
+.ms_actions {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: .8rem;
+    line-height: 0;
+    margin-left: .1rem;
 }
 
