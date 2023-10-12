@@ -1,20 +1,21 @@
 /* ROOT */
 
 :root {
-    --header-height: 60px;
+    --ms_header-height: 60px;
     --ms_sidebar-width: 60px;
     --ms_lg-sidebar-width: 120px;
     --ms_hero-height: 250px;
     --ms_hero-md-height: 180px;
     --ms_main-col-bg-color: #F8F9FA;
-    --header-bg-color: white;
-    --sidebar-bg-color: #0B2339;
-    --hero-bg-color: #1B72E8;
-    --table-bd-color: #dee2e6; 
-    --card-header-bg-color: #F7F7F7;
+    --ms_header-bg-color: white;
+    --ms_sidebar-bg-color: #0B2339;
+    --ms_hero-bg-color: #1B72E8;
+    --ms_table-bd-color: #dee2e6; 
+    --ms_card-header-bg-color: #F7F7F7;
     --ms_done-status-color: #198754;
     --ms_process-status-color: #FFC107;
     --ms_failed-status-color: #DC3545;
+    --ms_hover-bg-color: #ECECEC; 
 }
 
 /* RESET */
@@ -48,7 +49,7 @@ body {
 }
 
 .ms_card-header {
-    background-color: var(--card-header-bg-color);
+    background-color: var(--ms_card-header-bg-color);
     border: 1px solid var(--table-bd-color);
 }
 
@@ -56,12 +57,12 @@ body {
 /* HEADER */
 header {
     width: 100%;
-    height: var(--header-height);
-    background-color: var(--card-header-bg-color);
+    height: var(--ms_header-height);
+    background-color: var(--ms_card-header-bg-color);
 }
 
 .ms_logo {
-    height: calc(var(--header-height) - 25px);
+    height: calc(var(--ms_header-height) - 25px);
 }
 
 .ms_searchbar {
@@ -80,17 +81,16 @@ header {
 
 .ms_dash-container {
     width: 100%;
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--ms_header-height));
     margin: 0 auto;
 }
 
 /* SIDEBAR COL */
 .ms_sidebar-col {
     width: var(--ms_sidebar-width);
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--ms_header-height));
     background-image: url(../img/sidebar-bg.png);
-    background-color: var(--sidebar-bg-color);
-
+    background-color: var(--ms_sidebar-bg-color);
 }
 
 .sidebar-admin-icon a,
@@ -105,13 +105,16 @@ header {
     line-height: 30px;
 }
 
+.ms_side-links:hover {
+    background-color: var(--ms_hover-bg-color);
+}
 
 /* MAIN COL */
 
 
 .ms_main-col {
-    width: calc(100% - var(--sidebar-width));
-    height: calc(100vh - var(--header-height));
+    width: calc(100% - var(--ms_sidebar-width));
+    height: calc(100vh - var(--ms_header-height));
     overflow-y: scroll;
     background-color: var(--ms_main-col-bg-color);
 }
@@ -132,7 +135,7 @@ header {
 
 .ms_hero {
     height: var(--ms_hero-height);
-    background-color: var(--hero-bg-color);
+    background-color: var(--ms_hero-bg-color);
 }
 
 /* RESPONSIVE - HERO LAYOUT - 768px */
@@ -147,7 +150,7 @@ header {
 
 /* TABLE */
 .table>:not(:last-child)>:last-child>* {
-    border-bottom-color: var(--table-bd-color);
+    border-bottom-color: var(--ms_table-bd-color);
 }
 
 .ms_class-avatar {
@@ -180,5 +183,9 @@ header {
     padding: .4rem;
     line-height: 0;
     margin-left: .1rem;
+}
+
+tr:hover {
+    background-color: #ECECEC;
 }
 
