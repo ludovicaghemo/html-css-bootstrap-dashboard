@@ -47,7 +47,7 @@
                         <!-- /Searchbar -->
 
                         <!-- Menu -->
-                        <div class="col-auto">
+                        <div class="col-auto position-relative">
                             <ul class="d-flex list-unstyled mb-0 ps-0">
                                 <!-- Menu icon -->
                                 <li class="ms-3 d-none d-lg-inline-block">
@@ -62,8 +62,8 @@
                                     <a href=""><i class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></i></a>
                                 </li>
                                 <!-- Bell icon -->
-                                <li class="ms-3">
-                                    <a href=""><i class="fa-solid fa-bell" style="color: #ff8f00;"></i></i></a>
+                                <li class="ms_bell ms-3">
+                                    <a href=""><i class="ms_bell fa-solid fa-bell" style="color: #ff8f00;"></i></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -76,7 +76,6 @@
 
         <!-- Main -->
         <main>
-
             <!-- dashborard-container -->
             <div class="ms_dash-container">
                 <!-- Row -->
@@ -149,9 +148,11 @@
                         <div class="ms_hero">
                             <div class="col-12 p-3 text-white d-md-flex justify-content-between text-sm-start">
                                 <div class="order-md-3">Nuovo Studente
-                                    <button type="button" class="btn btn-outline-light ms-1 align-top">
+                                    <button type="button" class="btn btn-outline-light ms-1 align-top"data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                                         <i class="fa-solid fa-plus"></i>
                                         </button>
+
+
                                 </div>
                                 <div class="boolean-title text-sm-start g-3">
                                     <h1>Boolean
@@ -173,7 +174,6 @@
                                     </div>
                                     <!-- /Hero Buttons -->
                                 </div>
-                                    
                                     <div class="online-students-count">
                                             studenti online negli ultimi 30 minuti
                                         <div class="fs-1">125</div>
@@ -426,6 +426,86 @@
                 <!-- /Row -->
             </div>
             <!-- /dashborard-container -->
+
+            <!-- OFFCANVAS -->
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo studente</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  
+                    <form class="row g-3">
+                        <!-- Name -->
+                        <div class="col-md-6">
+                            <label for="inputName" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="inputName">
+                          </div>
+                          <!-- Lastname -->
+                        <div class="col-md-6">
+                            <label for="inputLastName" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="inputLastName">
+                          </div>
+                        <!-- Email -->
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Email</label>
+                          <div class="input-group">
+                            <div class="input-group-text">@</div>
+                            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="">
+                          </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <!-- Address -->
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Address</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <!-- City -->
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label">City</label>
+                          <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <!-- State -->
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label">State</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>Scegli...</option>
+                            <option>Italy</option>
+                            <option>Spain</option>
+                            <option>UK</option>
+                            <option>USA</option>
+                          </select>
+                        </div>
+                        <!-- Zip Code -->
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label">CAP</label>
+                          <input type="text" class="form-control" id="inputZip">
+                        </div>
+                        <!-- Check -->
+                        <div class="col-12">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                              Seleziona per proseguire
+                            </label>
+                          </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="col-6 w-25">
+                          <button type="submit" class="btn btn-primary">Salva</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-warning">Svuota</button>
+                        </div>
+                      </form>
+
+                </div>
+              </div>
         
         </main>
         <!-- /Main -->
@@ -440,3 +520,8 @@
 </body>
 
 </html>
+
+
+
+
+

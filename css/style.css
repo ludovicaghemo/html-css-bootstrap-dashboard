@@ -77,6 +77,8 @@ header {
     padding-left: .5rem;
 }
 
+
+
 /* MAIN/ */
 
 .ms_dash-container {
@@ -115,7 +117,7 @@ header {
 .ms_main-col {
     width: calc(100% - var(--ms_sidebar-width));
     height: calc(100vh - var(--ms_header-height));
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: var(--ms_main-col-bg-color);
 }
 
@@ -186,6 +188,6 @@ header {
 }
 
 tr:hover {
-    background-color: #ECECEC;
+    background-color: var(--ms_hover-bg-color);
 }
 
